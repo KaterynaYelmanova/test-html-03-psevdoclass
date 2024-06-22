@@ -117,7 +117,7 @@ body {
 .effective-section {
   background-color: rgb(46, 47, 66);
 }
-.title {
+.titles {
   width: 496px;
   margin-left: auto;
   margin-right: auto;
@@ -264,4 +264,77 @@ body {
 }
 .footer-text {
   width: 264px;
+}
+/*----батько перша дитина----*/
+/*.title + .text {
+  color: tomato;
+}
+.sub-title + .text {
+  color: blue;
+}*/
+
+/*----батько всі діти----*/
+/*.sub-title ~ .text {
+  color: blue;
+}*/
+/*----nth-child----*/
+/*.text:nth-child(2) {
+  color: turquoise;
+}
+.text:nth-child(3) {
+  color: red;
+}*/
+
+/*----обрати всі елементи----*/
+/*.wrapper * {
+  color: blueviolet;
+}*/
+
+/*----всі елементи після title----*/
+.title ~ .text {
+  color: green;
+}
+/*.sub-title ~ .text {
+  color: greenyellow;
+}*/
+
+/*----відступи між елементами----*/
+/*---або можна gap: 20px 10px;---*/
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 20px;
+  background-color: darksalmon;
+  /*якщо в якомусь є висота*/
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.box {
+  width: calc((100% - 30px) / 4);
+  height: 100px;
+  background-color: aqua;
+  border: 2px solid darkblue;
+}
+
+.box:nth-child(2) {
+  height: 200px;
+}
+.box:nth-child(7) {
+  height: 250px;
+}
+.boxes2 {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: gray;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: gold;
+  border: 2px solid red;
 }
